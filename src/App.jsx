@@ -3,6 +3,7 @@ import Cookies from "universal-cookie";
 import "./App.css";
 import reactLogo from "./assets/react.svg";
 import Auth from "./components/Auth";
+import Chat from "./components/Chat";
 import viteLogo from "/vite.svg";
 
 const cookies = new Cookies();
@@ -23,7 +24,7 @@ function App() {
     return (
       <div>
         {room ? (
-          <div>Chat </div>
+          <Chat room={room} />
         ) : (
           <div className="room">
             <label>Enter Room Name</label>
